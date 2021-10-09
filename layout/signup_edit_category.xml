@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/light_grey" >
+
+<!--            android:layout_below="@+id/mToolbar"-->
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_60sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/backClick"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/ic_back"
+                        android:tint="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"  />
+
+                    <TextView
+                        android:id="@+id/mostPopularTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/helvetica_bold"
+                        android:text="Most Popular \nCategories"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_20sdp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="@+id/backClick"
+                        app:layout_constraintTop_toBottomOf="@+id/backClick" />
+
+                    <View
+                        android:id="@+id/view9"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_3sdp"
+                        android:background="@color/red"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="@+id/mostPopularTV"
+                        app:layout_constraintTop_toBottomOf="@+id/mostPopularTV" />
+
+                    <LinearLayout
+                        android:id="@+id/searchCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="@id/view9"
+                        app:layout_constraintTop_toBottomOf="@id/view9">
+
+                        <LinearLayout
+                            android:id="@+id/searchCardViewInner"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginVertical="@dimen/_6sdp"
+                            android:background="@drawable/search_bg"
+                            android:orientation="horizontal"
+                            app:layout_constraintTop_toBottomOf="@id/mToolbar"
+                            tools:ignore="UselessParent">
+
+                            <EditText
+                                android:id="@+id/searchTextCategory"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="@dimen/_5sdp"
+                                android:fontFamily="@font/helvetica"
+                                android:hint="@string/search"
+                                android:paddingStart="@dimen/_10sdp"
+                                android:background="@null"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_11sdp"
+                                tools:ignore="Autofill,RtlSymmetry,TextFields" />
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="FIND IT"
+                                android:id="@+id/findItCategory"
+                                android:background="@drawable/search_btn_bg"
+                                android:textColor="@color/white"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewFlex"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="true"
+                        app:layout_constraintStart_toStartOf="@+id/searchCardView"
+                        app:layout_constraintTop_toBottomOf="@+id/searchCardView" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/button_background_red"
+            android:fontFamily="@font/helvetica"
+            android:text="@string/save"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+
+    </RelativeLayout>
+
+</layout>

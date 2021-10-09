@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cancelId"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:elevation="@dimen/_8sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/select_calender" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_50sdp"
+            android:background="@drawable/background_white"
+            android:paddingBottom="@dimen/_25sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.50">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_white"
+                android:padding="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/close_id"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:gravity="center"
+                    android:text="@string/_video_conferencing_scheduled"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/close_id" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/videoCallNowBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/pay_btn_back"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/video_call_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintStart_toStartOf="@+id/dateOfVideoConference"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ShedulevideoCallBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/button_background_red"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/schedule_video_call"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/dateOfVideoConference"
+                    app:layout_constraintStart_toEndOf="@+id/videoCallNowBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dateOfVideoConference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/dialog_edit_background"
+                    android:padding="@dimen/_2sdp"
+                    android:textColorHint="@color/grey"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:boxStrokeWidth="0dp"
+                    app:endIconTint="@color/black"
+                    app:hintTextAppearance="@style/HintText"
+                    app:hintTextColor="@color/grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/videoCallNowBtn"
+                    app:shapeAppearance="@style/Rounded">
+
+                    <EditText
+                        android:id="@+id/dateOfVideoConferenceET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/unselect_calender"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/_date"
+                        android:inputType="text"
+                        android:padding="@dimen/_16sdp"
+                        android:text="@string/mm_dd_yyyy"
+                        android:textColor="@color/black"
+                        android:textColorHint="#000000"
+                        android:textSize="@dimen/_14sdp"
+                        android:translationY="@dimen/_5sdp"
+                        tools:ignore="Autofill,TextFields" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/timeOfVideoConference"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/dialog_edit_background"
+                    android:padding="@dimen/_2sdp"
+                    android:textColorHint="@color/grey"
+                    app:boxBackgroundColor="@android:color/transparent"
+                    app:boxStrokeColor="@android:color/transparent"
+                    app:boxStrokeWidth="0dp"
+                    app:endIconTint="@color/black"
+                    app:hintTextAppearance="@style/HintText"
+                    app:hintTextColor="@color/grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dateOfVideoConference"
+                    app:shapeAppearance="@style/Rounded">
+
+                    <EditText
+                        android:id="@+id/timeOfVideoConferenceET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:drawableEnd="@drawable/unselected_clock"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:fontFamily="@font/helvetica"
+                        android:hint="@string/time"
+                        android:inputType="text"
+                        android:padding="@dimen/_16sdp"
+                        android:text="@string/_11_00_am"
+                        android:textColor="@color/black"
+                        android:textColorHint="#000000"
+                        android:textSize="@dimen/_14sdp"
+                        android:translationY="@dimen/_5sdp"
+                        tools:ignore="Autofill" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submit_video_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_16sdp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/button_background_red"
+                    android:fontFamily="@font/helvetica_bold"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/timeOfVideoConference"
+                    app:layout_constraintStart_toStartOf="@+id/timeOfVideoConference"
+                    app:layout_constraintTop_toBottomOf="@+id/timeOfVideoConference" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

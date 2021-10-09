@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title=""
+        android:id="@+id/navChatMenuId1"
+        android:icon="@drawable/unselect_inbox"/>
+
+    <item android:title=""
+        android:id="@+id/navNotificationMenuId1"
+        android:icon="@drawable/unselect_sub_category"/>
+
+    <item android:title="" />
+
+    <item android:title=""
+        android:id="@+id/navOrderMenuId1"
+        android:icon="@drawable/unselect_category"/>
+
+    <item android:title=""
+        android:id="@+id/navProfileMenuId1"
+        android:icon="@drawable/unselect_profile"/>
+
+</menu>
